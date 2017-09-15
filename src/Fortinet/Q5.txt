@@ -1,1 +1,12 @@
 
+we can create a MockImplement class to mock the db or use mokito framework
+
+1. MockImplement
+We can create a Mock class only used in unit test, as well as a mock spring config xml file.Then in the unit test class, include the mockApplicationContext.xml.
+After that, when we run the test, it will look up in the mock config xml to call the mock class.
+
+2. mokito
+Firstly add the mockito dependencies to the pom.xml
+Then we can use mock(Class) method to create a mocked version of our Dao class.
+Here are some usedful anonotations like @RunWith(MockitoJUnitRunner.class) , @Mock(used to declare a Dao class ), @InjectMocks
+Then we can define what data to return by mockito.thenReturn() method without calling a DB.
