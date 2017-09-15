@@ -6,7 +6,7 @@ public class MultiDimensionArraySum {
 	
 public static Long getValue(int... indexOfDimension) {
     	
-    	//code below only used to print all the index for my own test, please overwrite it
+    	//codes below only used to print all the index for my own test, please overwrite them
     	long value = 1;
         System.out.print(Arrays.toString(indexOfDimension)); 
         return value;
@@ -16,6 +16,10 @@ public static Long getValue(int... indexOfDimension) {
     public static Long sum(MultiDimensionArray mArray, int[] lengthOfDeminsion) { 
    // Time complexity:  O(n)
    // Space complexity: O(1)
+	    
+    	if(lengthOfDeminsion == null || lengthOfDeminsion.length == 0){
+    		return (long) 0;
+    	}
     	
     	long sum = 0;
     	//Initialize an array to store the indexOfDimension
